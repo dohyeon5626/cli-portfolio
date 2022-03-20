@@ -2,7 +2,7 @@ import React from "react";
 import './style/CliMessage.css'
 
 function CliMessage(props) {
-    return <div>
+    return <div className="line">
         {
             props.message.map(
                 v => {
