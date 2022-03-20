@@ -5,6 +5,7 @@ import Help from './Help'
 import Introduce from "./Introduce";
 import Life from "./Life";
 import Skill from "./Skill";
+import TeamProject from "./TeamProject";
 
 function CliInput(props) {
     const [inputValue, setInputValue] = useState("")
@@ -51,6 +52,14 @@ function CliInput(props) {
                     <>
                         <CliMessage message = {[{text: "<Dohyeon5626:\\Portfolio> " + r, color: "#FFFFFF"}]}></CliMessage>
                         <Skill></Skill>
+                    </>
+                )
+            }
+            else if (r === "team_project" || r === "TEAM_PROJECT") {
+                props.addStack(
+                    <>
+                        <CliMessage message = {[{text: "<Dohyeon5626:\\Portfolio> " + r, color: "#FFFFFF"}]}></CliMessage>
+                        <TeamProject></TeamProject>
                     </>
                 )
             }
