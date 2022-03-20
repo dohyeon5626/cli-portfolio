@@ -7,6 +7,7 @@ import Life from "./Life";
 import Skill from "./Skill";
 import TeamProject from "./TeamProject";
 import ToyProject from "./ToyProject";
+import NotExistsMessage from "./NotExistMessage";
 
 function CliInput(props) {
     const [inputValue, setInputValue] = useState("")
@@ -69,6 +70,14 @@ function CliInput(props) {
                     <>
                         <CliMessage message = {[{text: "<Dohyeon5626:\\Portfolio> " + r, color: "#FFFFFF"}]}></CliMessage>
                         <ToyProject></ToyProject>
+                    </>
+                )
+            }
+            else {
+                props.addStack(
+                    <>
+                        <CliMessage message = {[{text: "<Dohyeon5626:\\Portfolio> " + r, color: "#FFFFFF"}]}></CliMessage>
+                        <NotExistsMessage text = {r}></NotExistsMessage>
                     </>
                 )
             }
