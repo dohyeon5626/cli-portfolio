@@ -19,7 +19,7 @@ function CliInput(props) {
             if (r === "help" || r === "HELP") {
                 props.addStack(
                     <>
-                        <CliMessage message = {[{text: "<Dohyeon5626:\Portfolio> " + r, color: "#FFFFFF"}]}></CliMessage>
+                        <CliMessage message = {[{text: "<Dohyeon5626:\\Portfolio> " + r, color: "#FFFFFF"}]}></CliMessage>
                         <Help></Help>
                     </>
                 )
