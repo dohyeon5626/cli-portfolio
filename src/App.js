@@ -6,10 +6,10 @@ import Help from './components/Help'
 
 function App() {
   const [value, setValue] = useState([<CliMessage message = {[{text: "<Dohyeon5626:\\Portfolio> help", color: "#FFFFFF"}]}></CliMessage>, <Help></Help>]); // eslint-disable-line no-unused-vars
-  return (<>
+  return <>
     <div>{value}</div>
     <CliInput addStack = {(c) => setValue([...value, c])} clearStack = {() => setValue([])}></CliInput>
-  </>)
+  </>
 }
 
 export default App

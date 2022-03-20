@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CliMessage from "./CliMessage"
 import './style/CliInput.css'
 import Help from './Help'
+import Introduce from "./Introduce";
 
 function CliInput(props) {
     const [inputValue, setInputValue] = useState("")
@@ -24,8 +25,16 @@ function CliInput(props) {
                     </>
                 )
             }
-            if (r === "cls" || r === "CLS") {
+            else if (r === "cls" || r === "CLS") {
                 props.clearStack()
+            }
+            else if (r === "introduce" || r === "INTRODUCE") {
+                props.addStack(
+                    <>
+                        <CliMessage message = {[{text: "<Dohyeon5626:\\Portfolio> " + r, color: "#FFFFFF"}]}></CliMessage>
+                        <Introduce></Introduce>
+                    </>
+                )
             }
             resetInputField()
         }
@@ -38,10 +47,10 @@ function CliInput(props) {
         }
     ]
     
-    return (<div className="line">
+    return <div className="line">
             <CliMessage message={position}></CliMessage>
             <input className="command" value={inputValue} onChange={handleUserInput} onKeyPress = {(e) => addStack(e, e.target.value)}></input>
-        </div>)
+        </div>
 }
 
 export default CliInput
