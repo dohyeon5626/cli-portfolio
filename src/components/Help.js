@@ -79,6 +79,13 @@ function Help() {
         }
     ]
 
+    const finalMessage = [
+        {
+            text: "제 코드에 대한 자세한 정보는 Github와 Notion를 참조하십시오.",
+            color: "#FFFFFF"
+        }
+    ]
+
     return <div>
         <CliMessage message = {introduce}></CliMessage>
         <CliMessage message = {life}></CliMessage>
@@ -88,6 +95,9 @@ function Help() {
         <CliEmptyLine></CliEmptyLine>
         <CliMessage message = {cls}></CliMessage>
         <CliMessage message = {help}></CliMessage>
+        <CliEmptyLine></CliEmptyLine>
+        <CliMessage message = {finalMessage}></CliMessage>
+        <CliEmptyLine></CliEmptyLine>
     </div>
 }
 
