@@ -3,6 +3,7 @@ import CliMessage from "./CliMessage"
 import './style/CliInput.css'
 import Help from './Help'
 import Introduce from "./Introduce";
+import Life from "./Life";
 
 function CliInput(props) {
     const [inputValue, setInputValue] = useState("")
@@ -33,6 +34,14 @@ function CliInput(props) {
                     <>
                         <CliMessage message = {[{text: "<Dohyeon5626:\\Portfolio> " + r, color: "#FFFFFF"}]}></CliMessage>
                         <Introduce></Introduce>
+                    </>
+                )
+            }
+            else if (r === "life" || r === "LIFE") {
+                props.addStack(
+                    <>
+                        <CliMessage message = {[{text: "<Dohyeon5626:\\Portfolio> " + r, color: "#FFFFFF"}]}></CliMessage>
+                        <Life></Life>
                     </>
                 )
             }
