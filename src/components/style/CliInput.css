@@ -1,0 +1,11 @@
+.command {
+    outline: none;
+    background-color: #1E1E1E;
+    border: 0;
+    caret-color: white;
+    color: white;
+    font-family: 'JetBrains Mono', 'Nanum Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 15px;
+}
